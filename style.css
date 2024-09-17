@@ -1,7 +1,8 @@
 #container {
   width: 500px; /* Define a largura do container */
-  margin: 20px auto; /* Centraliza o container na página */
-
+  margin: 10px auto; /* Centraliza o container na página */
+  border: 1px solid #000; /* Borda preta para visualização do container */
+  position: relative; /* Necessário para posicionar a seta corretamente dentro do container */
 }
 
 
@@ -65,3 +66,27 @@
     left: 50px;
 
 }
+
+#ceu {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(to right, #007bff 0%, #00C8FF 50%, #FFFFFF 100%); /* Gradiente de azul para branco */
+    position: relative; /* Necessário para o posicionamento absoluto do sol funcionar */
+}
+
+#sol {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFF00; /* Cor amarela */
+    border-radius: 50%; /* Arredonda as bordas para criar um círculo */
+    position: absolute; /* Posicionamento absoluto para sobrepor ao céu */
+    top: 50%; /* Posiciona o sol no topo */
+    left: 50%; /* Posiciona o sol à esquerda */
+    transform: translate(-50%, -50%); /* Ajusta o sol para que seu centro esteja na posição especificada */
+}
+
+#seta-direita {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;/* cor azul */
+    clip-path: polygon(0% 30%, 70% 30%, 70% 0%, 100% 50%, 70% 100%, 70% 70%, 0% 70%,0% 30%);
